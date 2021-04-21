@@ -8,7 +8,7 @@ export const authInitialState = {
   isAuthenticated: false,
   error: null,
   loading: false,
-  data: null,
+  userData: null,
 };
 
 const authReducer = (state, {type, payload}) => {
@@ -22,7 +22,7 @@ const authReducer = (state, {type, payload}) => {
       return {
         ...state,
         loading: false,
-        data: payload,
+        userData: payload,
       };
     case REGISTER_FAIL:
       return {
